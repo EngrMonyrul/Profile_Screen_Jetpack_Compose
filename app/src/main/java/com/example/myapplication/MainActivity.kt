@@ -58,13 +58,15 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MyApplicationTheme { UserProfile() }
+            /*MyApplicationTheme { UserProfile() }*/
+            MyApplicationTheme {
+                ListViewScreenView()
+            }
         }
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
-@Preview(showSystemUi = true)
 @Composable
 fun UserProfile(
     pressedOnBack: () -> Unit = {}, clickOnMore: () -> Unit = {}
