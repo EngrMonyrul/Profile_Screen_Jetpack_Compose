@@ -60,7 +60,15 @@ class MainActivity : ComponentActivity() {
         setContent {
             /*MyApplicationTheme { UserProfile() }*/
             MyApplicationTheme {
-                ListViewScreenView()
+                /*ListViewScreenView()*/
+                CounterUI()
+                Scaffold(Modifier.fillMaxSize()) { innerPadding ->
+                    CounterUI(
+                        modifier = Modifier.padding(
+                            innerPadding
+                        )
+                    )
+                }
             }
         }
     }
